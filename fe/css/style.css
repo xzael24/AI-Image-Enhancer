@@ -1,0 +1,246 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: radial-gradient(#c3e6ff 10%, transparent 11%), 
+                      radial-gradient(#c3e6ff 10%, transparent 11%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #6c63ff;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h1 {
+    color: #6c63ff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-shadow: 3px 3px 0px rgba(108, 99, 255, 0.2);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Upload area styles */
+.upload-container {
+    width: 100%;
+}
+
+.drop-area {
+    border: 3px dashed #6c63ff;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(108, 99, 255, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.drop-area.highlight {
+    border-color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+.drop-area p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+#file-input {
+    display: none;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(108, 99, 255, 0.2);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(108, 99, 255, 0.3);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(108, 99, 255, 0.2);
+}
+
+/* Controls styles */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.scale-options {
+    width: 100%;
+    text-align: center;
+}
+
+.scale-options h3 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.option-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Loading indicator */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(108, 99, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #6c63ff;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Results container */
+.result-container {
+    width: 100%;
+    text-align: center;
+}
+
+.result-container h3 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.comparison {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.image-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+}
+
+.image-box h4 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.download-section {
+    margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .comparison {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-box {
+        width: 100%;
+    }
+}

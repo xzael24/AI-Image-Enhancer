@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Enhancer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Image Enhancer</h1>
+            <p>Upload your image and enhance it with AI magic!</p>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div id="drop-area" class="drop-area">
+                    <p>Drag & drop your image here</p>
+                    <p>or</p>
+                    <input type="file" id="file-input" accept="image/*">
+                    <label for="file-input" class="button">Choose an image</label>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="scale-options">
+                    <h3>Enhancement Options</h3>
+                    <div class="option-buttons">
+                        <button id="upscale-2x" class="button">Enhance 2x</button>
+                        <button id="upscale-4x" class="button">Enhance 4x</button>
+                    </div>
+                </div>
+
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Enhancing your image...</p>
+                </div>
+            </div>
+
+            <div id="result-container" class="result-container hidden">
+                <h3>Results</h3>
+                <div class="comparison">
+                    <div class="image-box">
+                        <h4>Original</h4>
+                        <div class="image-wrapper">
+                            <img id="original-image" src="" alt="Original Image">
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <h4>Enhanced</h4>
+                        <div class="image-wrapper">
+                            <img id="enhanced-image" src="" alt="Enhanced Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="download-section">
+                    <button id="download-btn" class="button">Download Enhanced Image</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by RealESRGAN AI Model</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
